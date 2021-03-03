@@ -18,4 +18,6 @@ if [ "$1" != "ci" ]; then
     # TODO: define as development requirements in setup.cfg
     venv/bin/pip -q install pytest  # TODO: black ipython ipdb
     venv/bin/pip freeze | grep -v {{ cookiecutter.project_name }} > requirements-dev.txt
+else
+    venv/bin/pip freeze | grep -v {{ cookiecutter.project_name }}
 fi
