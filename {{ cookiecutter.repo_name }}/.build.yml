@@ -20,6 +20,6 @@ tasks:
       venv/bin/tox
   - docs: |
       cd {{ cookiecutter.repo_name }}
-      ./reset-venv.sh docs  # TODO: create docs-only setup
-      venv/bin/pydoc-markdown > index.md
-      cat index.md  # TODO: publish on wiki
+      ./reset-venv.sh docs
+      venv/bin/pydoc-markdown
+      ls -R build  # TODO: publish
