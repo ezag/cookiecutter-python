@@ -19,7 +19,7 @@ if [ "$1" != "ci" ]; then
     venv/bin/pip -q install pytest black ipython ipdb
     venv/bin/pip freeze | grep -v {{ cookiecutter.project_name }} > requirements-dev.txt
     git add requirements*.txt
-    git commit requirements*.txt -m "Upgrade requirements - ./reset-venv.sh"
+    git commit requirements*.txt -m "Auto freeze requirements - ./reset-venv.sh"
 else
     venv/bin/pip freeze | grep -v {{ cookiecutter.project_name }}
 fi
