@@ -10,13 +10,11 @@ if [ "$1" != "ci" ]; then
     set -e
 fi
 
-# TODO: define as CI requirements in setup.cfg
-venv/bin/pip -q install tox
+venv/bin/pip -q install -e .[ci]
 
 if [ "$1" != "ci" ]; then
     venv/bin/pip freeze | grep -v {{ cookiecutter.project_name }} > requirements-ci.txt
-    # TODO: define as development requirements in setup.cfg
-    venv/bin/pip -q install pytest black ipython ipdb
+    venv/bin/pip -q install -e .[dev]
     venv/bin/pip freeze | grep -v {{ cookiecutter.project_name }} > requirements-dev.txt
     git add requirements*.txt
     git commit requirements*.txt -m "Auto freeze requirements - ./reset-venv.sh"
