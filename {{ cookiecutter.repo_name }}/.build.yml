@@ -14,7 +14,12 @@ packages:
 sources:
   - {{ cookiecutter.repo_url }}
 tasks:
-  - tox: |
+  - tests: |
       cd {{ cookiecutter.repo_name }}
-      ./reset-venv.sh ci
+      ./reset-venv.sh tests
       venv/bin/tox
+  - docs: |
+      cd {{ cookiecutter.repo_name }}
+      ./reset-venv.sh docs  # TODO: create docs-only setup
+      venv/bin/pydoc-markdown > index.md
+      cat index.md  # TODO: publish on wiki
