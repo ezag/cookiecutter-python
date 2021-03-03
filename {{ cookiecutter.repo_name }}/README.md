@@ -19,4 +19,5 @@ git push -u origin main -f
 ./reset-venv.sh
 venv/bin/syaconf
 venv/bin/tox -s true
+./publish-docs.sh
 ```
