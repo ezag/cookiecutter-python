@@ -1,0 +1,20 @@
+# https://man.sr.ht/builds.sr.ht/manifest.md
+# https://man.sr.ht/builds.sr.ht/compatibility.md
+
+# Using Alpine can make Python Docker builds 50× slower
+# https://pythonspeed.com/articles/alpine-docker-python/
+
+# The best Docker base image for your Python application (February 2021)
+# https://pythonspeed.com/articles/base-image-python-docker-images/
+
+image: alpine/edge
+packages:
+  - py3-pytest
+  - python3
+sources:
+  - {{ cookiecutter.repo_url }}
+tasks:
+  - tox: |
+      cd {{ cookiecutter.repo_name }}
+      ./reset-venv.sh  # TODO: skip development requirements - CI only
+      venv/bin/tox
