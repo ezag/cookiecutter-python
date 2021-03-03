@@ -16,5 +16,5 @@ sources:
 tasks:
   - tox: |
       cd {{ cookiecutter.repo_name }}
-      ./reset-venv.sh  # TODO: skip development requirements - CI only
+      ./reset-venv.sh ci
       venv/bin/tox
