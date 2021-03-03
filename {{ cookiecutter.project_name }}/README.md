@@ -1,4 +1,4 @@
-# {{cookiecutter.name}}
+# {{cookiecutter.project_name}}
 
 This readme is auto-generated via:
 
