@@ -18,6 +18,7 @@ if [ "$1" != "ci" ]; then
     venv/bin/pip freeze | grep -v {{ cookiecutter.project_name }} > requirements-dev.txt
     git add requirements*.txt
     git commit requirements*.txt -m "Auto freeze requirements - ./reset-venv.sh"
+    venv/bin/pre-commit install
 else
     venv/bin/pip freeze | grep -v {{ cookiecutter.project_name }}
 fi
