@@ -1,5 +1,9 @@
 # {{cookiecutter.project_name}}
 
+[![builds.sr.ht status](
+{{ cookiecutter.build_url }}.svg)](
+{{ cookiecutter.build_url }})
+
 ```shell
 cd ..
 rm -rf python-syaconf

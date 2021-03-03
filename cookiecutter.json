@@ -2,5 +2,6 @@
   "project_name": "syaconf",
   "repo_name": "python-syaconf",
   "repo_url": "https://git.sr.ht/~zag/python-syaconf",
+  "build_url": "https://builds.sr.ht/~zag/python-syaconf",
   "author": "Eugen Zagorodniy"
 }
