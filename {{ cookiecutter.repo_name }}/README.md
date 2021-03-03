@@ -1,8 +1,16 @@
-# {{cookiecutter.project_name}}
-
 [![builds.sr.ht status](
 {{ cookiecutter.build_url }}.svg)](
 {{ cookiecutter.build_url }})
+
+# Project Home
+
+{{ cookiecutter.repo_url }}
+
+# API Documentation #
+
+{{ cookiecutter.docs_url }}/api-documentation.md
+
+# Cookiecutter routines
 
 ```shell
 cd ..

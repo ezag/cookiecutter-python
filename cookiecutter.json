@@ -4,5 +4,6 @@
   "repo_url": "https://git.sr.ht/~zag/python-syaconf",
   "publish_url": "git@git.sr.ht:~zag/python-syaconf",
   "build_url": "https://builds.sr.ht/~zag/python-syaconf",
+  "docs_url": "https://man.sr.ht/~zag/python-syaconf",
   "author": "Eugen Zagorodniy"
 }
