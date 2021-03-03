@@ -14,5 +14,5 @@ git commit -m "Initial commit"
 git push -u origin main -f
 ./reset-venv.sh
 venv/bin/syaconf
-venv/bin/tox
+venv/bin/tox -s true
 ```
