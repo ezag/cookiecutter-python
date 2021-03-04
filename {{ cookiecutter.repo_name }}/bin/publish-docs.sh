@@ -15,5 +15,5 @@ cd -
 venv/bin/pydoc-markdown
 cd -
 git add .
-git commit -a -m "Auto upgrade - publish-docs.sh"
+git commit -a -m "Auto commit - publish-docs.sh"
 git push -u publish wiki

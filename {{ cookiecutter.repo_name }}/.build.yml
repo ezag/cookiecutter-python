@@ -8,6 +8,8 @@
 # https://pythonspeed.com/articles/base-image-python-docker-images/
 
 image: alpine/edge
+secrets:
+  - {{ cookiecutter.build_secret }}
 packages:
   - py3-pytest
   - python3
@@ -16,10 +18,9 @@ sources:
 tasks:
   - tests: |
       cd {{ cookiecutter.repo_name }}
-      ./reset-venv.sh tests
+      bin/reset-venv.sh tests
       venv/bin/tox
   - docs: |
       cd {{ cookiecutter.repo_name }}
-      ./reset-venv.sh docs
-      venv/bin/pydoc-markdown
-      ls -R build  # TODO: publish
+      bin/reset-venv.sh docs
+      bin/publish-docs.sh
