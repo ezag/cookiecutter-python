@@ -9,7 +9,8 @@
 
 image: alpine/edge
 secrets:
-  - {{ cookiecutter.build_secret }}
+  - {{ cookiecutter.ssh_key_secret }}
+  - {{ cookiecutter.known_hosts_secret }}
 packages:
   - py3-pytest
   - python3

@@ -5,7 +5,8 @@
   "publish_url": "git@git.sr.ht:~zag/python-syaconf",
   "build_url": "https://builds.sr.ht/~zag/python-syaconf",
   "docs_url": "https://man.sr.ht/~zag/python-syaconf",
-  "build_secret": "421580d1-f2d6-4341-9ffe-c9ac6476f054",
+  "ssh_key_secret": "421580d1-f2d6-4341-9ffe-c9ac6476f054",
+  "known_hosts_secret": "abd3b2c8-2c28-4485-8f64-43ff3b534981",
   "todo_url": "https://todo.sr.ht/~zag/python-syaconf",
   "man_url": "https://man.sr.ht/~zag/python-syaconf",
   "author": "Eugen Zagorodniy"
